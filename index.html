@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	
+	<style>
+		.get_list {
+			font-size: 40px;
+			padding: 10px 10px 10px 10px;
+			cursor: pointer;
+		}
+	</style>
+    <title>Lista de países</title>
+  </head>
+  <body>
+    <h1 class="display-3 text-center">Lista de países</h1>
+	<p class="lead text-center">Selecione uma opção abaixo</p>
+	<div class="container">
+	  <div class="row">
+		<div class="col">
+			<div class="rounded text-center w-100 bg-info text-center text-white get_list" data-type="html">
+				Visualizar <i class="fas fa-list-ul"></i>
+			</div>
+		</div>
+		<div class="col">
+			<div class="rounded text-center w-100 bg-info text-center text-white get_list" data-type="csv">
+				Download CSV <i class="fas fa-download"></i>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-auto">
+			
+				<div class="retorno" style="display: none; padding-top: 20px;">
+				</div>
+
+				<div class="lds-css ng-scope loading_css" style="display: none;">
+				<div class="lds-spinner" style="100%;height:100%"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+				<style type="text/css">@keyframes lds-spinner {
+				  0% {
+					opacity: 1;
+				  }
+				  100% {
+					opacity: 0;
+				  }
+				}
+				@-webkit-keyframes lds-spinner {
+				  0% {
+					opacity: 1;
+				  }
+				  100% {
+					opacity: 0;
+				  }
+				}
+				.lds-spinner {
+				  position: relative;
+				}
+				.lds-spinner div {
+				  left: 94px;
+				  top: 48px;
+				  position: absolute;
+				  -webkit-animation: lds-spinner linear 1s infinite;
+				  animation: lds-spinner linear 1s infinite;
+				  background: #957bbe;
+				  width: 12px;
+				  height: 24px;
+				  border-radius: 40%;
+				  -webkit-transform-origin: 6px 52px;
+				  transform-origin: 6px 52px;
+				}
+				.lds-spinner div:nth-child(1) {
+				  -webkit-transform: rotate(0deg);
+				  transform: rotate(0deg);
+				  -webkit-animation-delay: -0.916666666666667s;
+				  animation-delay: -0.916666666666667s;
+				}
+				.lds-spinner div:nth-child(2) {
+				  -webkit-transform: rotate(30deg);
+				  transform: rotate(30deg);
+				  -webkit-animation-delay: -0.833333333333333s;
+				  animation-delay: -0.833333333333333s;
+				}
+				.lds-spinner div:nth-child(3) {
+				  -webkit-transform: rotate(60deg);
+				  transform: rotate(60deg);
+				  -webkit-animation-delay: -0.75s;
+				  animation-delay: -0.75s;
+				}
+				.lds-spinner div:nth-child(4) {
+				  -webkit-transform: rotate(90deg);
+				  transform: rotate(90deg);
+				  -webkit-animation-delay: -0.666666666666667s;
+				  animation-delay: -0.666666666666667s;
+				}
+				.lds-spinner div:nth-child(5) {
+				  -webkit-transform: rotate(120deg);
+				  transform: rotate(120deg);
+				  -webkit-animation-delay: -0.583333333333333s;
+				  animation-delay: -0.583333333333333s;
+				}
+				.lds-spinner div:nth-child(6) {
+				  -webkit-transform: rotate(150deg);
+				  transform: rotate(150deg);
+				  -webkit-animation-delay: -0.5s;
+				  animation-delay: -0.5s;
+				}
+				.lds-spinner div:nth-child(7) {
+				  -
+				  webkit-transform: rotate(180deg);
+				  transform: rotate(180deg);
+				  -webkit-animation-delay: -0.416666666666667s;
+				  animation-delay: -0.416666666666667s;
+				}
+				.lds-spinner div:nth-child(8) {
+				  -webkit-transform: rotate(210deg);
+				  transform: rotate(210deg);
+				  -webkit-animation-delay: -0.333333333333333s;
+				  animation-delay: -0.333333333333333s;
+				}
+				.lds-spinner div:nth-child(9) {
+				  -webkit-transform: rotate(240deg);
+				  transform: rotate(240deg);
+				  -webkit-animation-delay: -0.25s;
+				  animation-delay: -0.25s;
+				}
+				.lds-spinner div:nth-child(10) {
+				  -webkit-transform: rotate(270deg);
+				  transform: rotate(270deg);
+				  -webkit-animation-delay: -0.166666666666667s;
+				  animation-delay: -0.166666666666667s;
+				}
+				.lds-spinner div:nth-child(11) {
+				  -webkit-transform: rotate(300deg);
+				  transform: rotate(300deg);
+				  -webkit-animation-delay: -0.083333333333333s;
+				  animation-delay: -0.083333333333333s;
+				}
+				.lds-spinner div:nth-child(12) {
+				  -webkit-transform: rotate(330deg);
+				  transform: rotate(330deg);
+				  -web
+				  ´kit-animation-delay: 0s;
+				  animation-delay: 0s;
+				}
+				.lds-spinner {
+				  width: 200px !important;
+				  height: 200px !important;
+				  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+				  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+				}
+				</style></div>
+			</div>
+		</div>
+	</div>
+	
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script>
+		$('.get_list').on('click',function() {
+			if($(this).data('type') == 'csv') {
+				document.location.href = 'paises.php';
+			} else {
+				$.ajax({
+					url: 'paises.php',
+					method: 'POST',
+					data: { tipo: $(this).data('type') },
+					beforeSend: function(){
+						$('.retorno').hide();
+						$('.loading_css').show();
+					},
+					success: function(retorno_json) {
+						retorno = jQuery.parseJSON(retorno_json);
+						$('.retorno').append('<ul></ul>');
+							for (var index in retorno.retorno) {
+								//console.log("obj." + index + " = " + retorno.retorno[index]);
+								$('.retorno ul').append("<li>" + index + " - " + retorno.retorno[index] + "</li>");
+							}
+						$('.loading_css').hide();
+						$('.retorno').show();
+					}
+				});
+			}
+		});
+	</script>
+	
+  </body>
+</html>
